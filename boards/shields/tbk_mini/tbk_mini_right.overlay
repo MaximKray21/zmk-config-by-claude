@@ -1,0 +1,31 @@
+/*
+ * TBK Mini – RIGHT half overlay
+ *
+ * Columns (Pro Micro pin numbers) – same physical wiring as left side:
+ *   C0 – pin 8
+ *   C1 – pin 9
+ *   C2 – pin 10
+ *   C3 – pin 11
+ *   C4 – pin 14
+ *   C5 – pin 15
+ *
+ * col-offset = 6 shifts right-side columns to positions 6-11 in the
+ * combined matrix transform defined in tbk_mini.dtsi.
+ */
+
+#include "tbk_mini.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 8  GPIO_ACTIVE_HIGH>   /* C0 */
+        , <&pro_micro 9  GPIO_ACTIVE_HIGH>   /* C1 */
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>   /* C2 */
+        , <&pro_micro 11 GPIO_ACTIVE_HIGH>   /* C3 */
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>   /* C4 */
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>   /* C5 */
+        ;
+};
+
+&default_transform {
+    col-offset = <6>;
+};

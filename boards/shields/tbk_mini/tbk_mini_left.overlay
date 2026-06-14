@@ -1,0 +1,24 @@
+/*
+ * TBK Mini – LEFT half overlay
+ *
+ * Columns (Pro Micro pin numbers):
+ *   C0 – pin 8
+ *   C1 – pin 9
+ *   C2 – pin 10
+ *   C3 – pin 11
+ *   C4 – pin 14
+ *   C5 – pin 15
+ */
+
+#include "tbk_mini.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 8  GPIO_ACTIVE_HIGH>   /* C0 */
+        , <&pro_micro 9  GPIO_ACTIVE_HIGH>   /* C1 */
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>   /* C2 */
+        , <&pro_micro 11 GPIO_ACTIVE_HIGH>   /* C3 */
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>   /* C4 */
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>   /* C5 */
+        ;
+};

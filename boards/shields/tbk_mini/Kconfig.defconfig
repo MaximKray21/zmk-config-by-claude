@@ -1,0 +1,17 @@
+if SHIELD_TBK_MINI_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "TBK Mini"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_TBK_MINI_LEFT
+
+if SHIELD_TBK_MINI_LEFT || SHIELD_TBK_MINI_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif # SHIELD_TBK_MINI_LEFT || SHIELD_TBK_MINI_RIGHT
