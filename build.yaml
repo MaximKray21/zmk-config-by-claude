@@ -1,6 +1,6 @@
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano@2
     shield: tbk_mini_left
-  - board: nice_nano_v2
+  - board: nice_nano@2
     shield: tbk_mini_right
